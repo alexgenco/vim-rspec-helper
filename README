@@ -4,6 +4,7 @@ Just call CopyRSpecFileCommand() or CopyRSpecSingleExampleCommand(), and the
 command will be copied to your clipboard, ready to be pasted into a terminal.
 
 These are the mappings I use (in ~/.vimrc):
+
 let mapleader = ","
 nnoremap <Leader>r :call CopyRSpecFileCommand()<CR>
 nnoremap <Leader>R :call CopyRSpecSingleExampleCommand()<CR>
