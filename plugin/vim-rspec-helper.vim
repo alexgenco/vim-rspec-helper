@@ -7,13 +7,14 @@ if !exists('g:rspec_helper_copy_command')
 endif
 
 function! CopyRSpecFileCommand()
-  call CopyToClipboard(g:rspec_helper_rspec_command . " " . bufname('%') . " --color")
+  call CopyToClipboard(g:rspec_helper_rspec_command . " " . bufname('%'))
 endfunction
 
 function! CopyRSpecSingleExampleCommand()
-  call CopyToClipboard(g:rspec_helper_rspec_command . " " . bufname('%') . " -l " . line('.') . " --color")
+  call CopyToClipboard(g:rspec_helper_rspec_command . " " . bufname('%') . " -l " . line('.'))
 endfunction
 
 function! CopyToClipboard(string)
   call system(g:rspec_helper_copy_command, a:string)
+  echo
 endfunction
