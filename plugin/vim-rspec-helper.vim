@@ -6,7 +6,7 @@ endif
 
 " called with a truthy value will run the current line
 function! CopyRSpecCommand(...)
-  let line_or_blank = (a:0 > 0 && a:1) ? (' ' . line('.')) : ''
+  let line_or_blank = (a:0 > 0 && a:1) ? (' -l ' . line('.')) : ''
   let command = g:rspec_helper_rspec_command . " " . expand("%:p:.") . line_or_blank
   call CopyToClipboard(command)
 endfunction
