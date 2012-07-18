@@ -13,5 +13,5 @@ endfunction
 
 function! CopyToClipboard(string)
   let @* = a:string
-  echo a:string
+  echo '"' . a:string . '" copied'
 endfunction
